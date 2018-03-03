@@ -1,0 +1,19 @@
+{
+  "name": "workflow-course-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hazem3500/Workflow-course-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hazem3500/Workflow-course-repo/issues"
+  },
+  "homepage": "https://github.com/hazem3500/Workflow-course-repo#readme"
+}
