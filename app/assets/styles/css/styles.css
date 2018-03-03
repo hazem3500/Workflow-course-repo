@@ -1,0 +1,13 @@
+body {
+    color: yellow;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+}
+
+.box {
+    color: blue;
+}
+
+.box a {
+        color: blue;
+    }
