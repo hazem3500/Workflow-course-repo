@@ -1,11 +1,10 @@
 const gulp = require('gulp');
 
+const sass = require('gulp-sass');
+const moduleImporter = require('sass-module-importer');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const cssvars = require('postcss-simple-vars');
-const nested = require('postcss-nested');
 const plumber = require('gulp-plumber');
-const extReplace = require('gulp-ext-replace');
 
 function customPlumber() {
     return plumber({
@@ -16,16 +15,16 @@ function customPlumber() {
     });
 }
 
-gulp.task('postcss', () =>
-    gulp.src('./app/assets/styles/postcss/**/*.postcss')
+gulp.task('styles', () =>
+    gulp
+        .src('./app/assets/styles/scss/**/*.scss')
         .pipe(customPlumber())
-        .pipe(postcss([cssvars, nested, autoprefixer]))
-        .pipe(extReplace('.css'))
+        .pipe(sass({ importer: moduleImporter() }))
+        .pipe(postcss([autoprefixer]))
         .pipe(gulp.dest('./app/assets/styles/css'))
 );
 
-gulp.task('watch', ['postcss'], () => {
-    gulp.watch('./app/index.html', ['default']);
-    gulp.watch('./app/assets/styles/postcss/**/*.postcss', ['postcss']);
+gulp.task('watch', ['styles'], () => {
+    gulp.watch('./app/assets/styles/scss/**/*.scss', ['styles']);
 });
 

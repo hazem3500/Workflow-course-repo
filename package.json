@@ -18,12 +18,16 @@
   "homepage": "https://github.com/hazem3500/Workflow-course-repo#readme",
   "devDependencies": {
     "autoprefixer": "^8.1.0",
-    "gulp": "^3.9.1",
-    "gulp-ext-replace": "^0.3.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0",
-    "postcss-nested": "^3.0.0",
-    "postcss-simple-vars": "^4.1.0"
+    "sass-module-importer": "^1.4.0",
+    "stylelint": "^9.1.1",
+    "stylelint-config-recommended-scss": "^3.1.0",
+    "stylelint-scss": "^2.4.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "normalize.css": "^8.0.0"
   }
 }

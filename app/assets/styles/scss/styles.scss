@@ -1,0 +1,10 @@
+//plugins
+@import 'normalize.css';
+
+//globals
+@import './base/globals';
+@import './base/_variables.scss';
+
+//modules
+@import './modules/_large-hero.scss';
+@import './modules/_btn.scss';
