@@ -2,9 +2,15 @@
 @import 'normalize.css';
 
 //globals
-@import './base/globals';
 @import './base/_variables.scss';
+@import './base/_mixins.scss';
+@import './base/globals';
 
 //modules
 @import './modules/_large-hero.scss';
 @import './modules/_btn.scss';
+@import './modules/_wrapper.scss';
+@import './modules/_page-section.scss';
+@import './modules/_headline.scss';
+@import './modules/_grid-1x3.scss';
+@import './modules/_content-container.scss';
