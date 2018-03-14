@@ -1,7 +1,7 @@
 .grid {
     display: grid;
 
-    &-1x3 {
+    &-1-2 {
         grid-template-columns: 1fr;
 
         @include atMedium {
@@ -9,9 +9,24 @@
         }
     }
 
-    &-2x2 {
+    &-1-1x2 {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         justify-content: space-between;
+    }
+
+    &-1-1-1 {
+        @include atMedium {
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+        }
+    }
+
+    &--t-padding {
+        padding-top: 0;
+
+        @include atSmall {
+            padding-top: 80px;
+        }
     }
 
     &--gap {
