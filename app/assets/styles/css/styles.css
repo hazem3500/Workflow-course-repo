@@ -418,23 +418,76 @@ a {
   .headline--no-t-margin {
     margin-top: 0; }
 
-.grid-1x3 {
-  display: grid;
-  grid-template-columns: 1fr; }
-  @media (min-width: 800px) {
-    .grid-1x3 {
-      grid-template-columns: 1.1fr 1.9fr; }
-      .grid-1x3--gap {
-        grid-gap: 4.25rem; } }
-  .grid-1x3--gap {
+.grid {
+  display: grid; }
+  .grid-1x3 {
+    grid-template-columns: 1fr; }
+    @media (min-width: 800px) {
+      .grid-1x3 {
+        grid-template-columns: 1.1fr 1.9fr; } }
+  .grid-2x2 {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: space-between; }
+  .grid--gap {
     grid-gap: 1rem; }
+    @media (min-width: 800px) {
+      .grid--gap {
+        grid-gap: 4.25rem; } }
+  .grid--gap-large {
+    grid-gap: 1rem; }
+    @media (min-width: 800px) {
+      .grid--gap-large {
+        grid-gap: 0.2rem 8rem; } }
 
 .content-container p {
   line-height: 1.65;
-  margin: 1.8rem 0; }
+  margin: 0 0 1.8rem 0;
+  font-weight: 300; }
   @media (min-width: 530px) {
     .content-container p {
       font-size: 1.125rem; } }
 
 .content-container p a {
   font-weight: 700; }
+
+.section-title {
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center; }
+  @media (min-width: 530px) {
+    .section-title {
+      font-size: 3.75rem; } }
+  .section-title strong {
+    font-weight: 500; }
+  .section-title__icon {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0.6rem; }
+    @media (min-width: 530px) {
+      .section-title__icon {
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-bottom: 0; } }
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  @media (min-width: 530px) {
+    .feature-item {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left; } }
+  .feature-item__icon {
+    margin-right: 0;
+    margin-top: 30px; }
+    @media (min-width: 530px) {
+      .feature-item__icon {
+        margin-right: 40px; } }
+  .feature-item__title {
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem; }

@@ -1,0 +1,30 @@
+.grid {
+    display: grid;
+
+    &-1x3 {
+        grid-template-columns: 1fr;
+
+        @include atMedium {
+            grid-template-columns: 1.1fr 1.9fr;
+        }
+    }
+
+    &-2x2 {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        justify-content: space-between;
+    }
+
+    &--gap {
+        grid-gap: 1rem;
+        @include atMedium {
+            grid-gap: 4.25rem;
+        }
+    }
+
+    &--gap-large {
+        grid-gap: 1rem;
+        @include atMedium {
+            grid-gap: 0.2rem 8rem;
+        }
+    }
+}
