@@ -12,6 +12,11 @@
         width: 100%;
         text-align: center;
         transform: translateY(-50%);
+        padding-top: 88px;
+
+        @include atMedium {
+            padding-top: 60px;
+        }
     }
 
     &__title {
