@@ -9,8 +9,13 @@
     }
 
     @include atMedium {
+        position: fixed;
         padding: 10px 0;
         background: rgba($mainBlue, 0.3);
+
+        &--dark {
+            background: rgba($darkBlue, 0.9);
+        }
     }
 
     &__logo {
@@ -18,6 +23,7 @@
         top: -10px;
         left: 50%;
         transform: translateX(-50%) scale(0.8);
+        transition: transform 0.3s ease-out;
         transform-origin: 50% 0;
         background: $mainBlue;
         padding: 25px 35px;
@@ -25,6 +31,10 @@
         @include atMedium {
             left: 0%;
             transform: translateX(0);
+
+            .site-header--dark & {
+                transform: scale(0.52);
+            }
         }
 
         &__graphic {
@@ -38,6 +48,24 @@
 
         @include atMedium {
             justify-content: flex-end;
+        }
+    }
+
+    &__menu-content {
+        display: none;
+
+        @include atMedium {
+            display: flex;
+            align-items: center;
+        }
+
+        &--is-visible {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 1;
+            padding-top: 100px;
+            animation: menuAnimation 0.5s 1 ease-out;
         }
     }
 
@@ -69,16 +97,27 @@
         a {
             color: #fff;
             text-decoration: none;
+
+            @include atMedium {
+                &.is-current-link {
+                    color: lighten($mainOrange, 1.2);
+                }
+            }
         }
     }
 
     &__btn {
         order: -1;
         margin-bottom: 15px;
+        transition: background-color 0.3s ease-out;
 
         @include atMedium {
             order: 1;
             margin-bottom: 0;
+
+            .site-header--dark & {
+                background-color: $mainOrange;
+            }
         }
     }
 
@@ -141,24 +180,6 @@
 
         &::after {
             transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-        }
-    }
-
-    &__menu-content {
-        display: none;
-
-        @include atMedium {
-            display: flex;
-            align-items: center;
-        }
-
-        &--is-visible {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 1;
-            padding-top: 100px;
-            animation: menuAnimation 0.5s 1 ease-out;
         }
     }
 }

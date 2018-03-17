@@ -37,6 +37,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "normalize.css": "^8.0.0",
+    "smoothscroll": "^0.4.0",
     "waypoints": "^4.0.1"
   }
 }
