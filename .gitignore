@@ -17,6 +17,7 @@ node_modules/
 Thumbs.db
 .cache
 .project
+.vscode
 .settings
 .tmproj
 *.esproj
