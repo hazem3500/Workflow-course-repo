@@ -14,9 +14,11 @@
         background: rgba($color: $mainBlue, $alpha: 0.2);
 
         @include atSmall {
-            background: url('/assets/images/testimonials-bg.jpg') top center
-                no-repeat;
-            background-size: cover;
+            &.lazyloaded {
+                background: url('/assets/images/testimonials-bg.jpg') top center
+                    no-repeat;
+                background-size: cover;
+            }
         }
     }
 

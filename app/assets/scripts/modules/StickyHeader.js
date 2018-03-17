@@ -9,9 +9,17 @@ export default class StickyHeader {
         );
         this.pageSections = document.querySelectorAll('.page-section');
         this.headerLinks = document.querySelectorAll('.site-header__nav a');
+        this.lazyImages = document.querySelectorAll('.lazyload');
         this.createHeaderWaypoint();
         this.createPageSectionWaypoints();
         this.addSmoothScroll();
+        this.refreshWaypoints();
+    }
+
+    refreshWaypoints() {
+        this.lazyImages.forEach((img) =>
+            img.addEventListener('load', () => Waypoint.refreshAll())
+        );
     }
 
     addSmoothScroll() {

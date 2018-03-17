@@ -8,6 +8,7 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
   <link rel="stylesheet" href="./assets/styles/css/styles.css">
+  <script src="./temp/scripts/vendor.js"></script>
 </head>
 
 <body>
@@ -72,12 +73,12 @@
         <strong> better for everyone.</strong>
       </h3>
       <div class="wrapper wrapper--medium wrapper--b-margin">
-        <img sizes="(min-width: 970px) 976px, 100vw" srcset="./assets/images/first-trip-low-res.jpg 565w,./assets/images/first-trip.jpg 976w, ./assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
+        <img sizes="(min-width: 970px) 976px, 100vw" class="lazyload" data-srcset="./assets/images/first-trip-low-res.jpg 565w,./assets/images/first-trip.jpg 976w, ./assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
       </div>
       <div class="grid grid-1-2 grid--gap">
         <div>
           <picture>
-            <source sizes="404px" media="(min-width: 1200px)" srcset="./assets/images/our-start.jpg 404w, ./assets/images/our-start-hi-dpi.jpg 808w">
+            <source sizes="404px" media="(min-width: 1200px)" class="lazyload" data-srcset="./assets/images/our-start.jpg 404w, ./assets/images/our-start-hi-dpi.jpg 808w">
             <source sizes="320px" media="(min-width: 800px)" srcset="./assets/images/our-start-portrait.jpg 382w, ./assets/images/our-start-portrait-hi-dpi.jpg 764w">
             <img srcset="./assets/images/our-start-landscape.jpg 800w,  ./assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
           </picture>
@@ -141,7 +142,7 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section page-section--testimonials page-section--no-b-padding-until-medium" data-matching-link="#testimonials-link">
+  <div id="testimonials" class="page-section page-section--testimonials page-section--no-b-padding-until-medium lazyload" data-matching-link="#testimonials-link">
     <div class="wrapper wrapper--no-padding-until-medium">
       <h2 class="section-title section-title--blue">
         <span class="icon icon--comment section-title__icon"></span> Real
@@ -150,7 +151,7 @@
       <div class="grid grid-1-1-1 grid--gap grid--t-padding content-container">
         <div class='testimonial'>
           <div class='testimonial__img'>
-            <img sizes="160px" srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" alt="jane">
+            <img sizes="160px" class="lazyload" data-srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" alt="jane">
           </div>
           <h3 class='testimonial__title'>Jane Doe</h3>
           <h4 class='testimonial__subtitle'>9 Time Escaper</h4>
@@ -159,7 +160,7 @@
 
         <div class='testimonial'>
           <div class='testimonial__img'>
-            <img sizes="160px" srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" alt="john">
+            <img sizes="160px" class="lazyload" data-srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" alt="john">
           </div>
           <h3 class='testimonial__title'>John Smith</h3>
           <h4 class='testimonial__subtitle'>4 Time Escaper</h4>
@@ -168,7 +169,7 @@
 
         <div class='testimonial'>
           <div class='testimonial__img'>
-            <img sizes="160px" srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w" alt="cat">
+            <img sizes="160px" class="lazyload" data-srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w" alt="cat">
           </div>
           <h3 class='testimonial__title'>Cat McKitty</h3>
           <h4 class='testimonial__subtitle'>6 Time Escaper</h4>
