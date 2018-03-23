@@ -81,7 +81,7 @@ export default class StickyHeader {
                             .classList.add('is-current-link');
                     }
                 },
-                offset: '-80%'
+                offset: '-40%'
             });
         });
     }
